@@ -55,7 +55,6 @@ var getScriptPromisify = (src) => {
 
       
       const myChart = echarts.init(this._root, 'wight')
-
       const option = {
         tooltip: {
           trigger: 'item'
@@ -71,31 +70,31 @@ var getScriptPromisify = (src) => {
             radius: ['40%', '65%'],
             avoidLabelOverlap: false,
             itemStyle: {
-            borderRadius: 10,
-            borderColor: '#fff',
-            borderWidth: 4
-          },
-          label: {
-            show: false,
-            position: 'center'
-          },
-          emphasis: {
+              borderRadius: 10,
+              borderColor: '#fff',
+              borderWidth: 4
+            },
             label: {
-            show: true,
-            fontSize: '25',
-            fontWeight: 'bold'
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: '25',
+                fontWeight: 'bold'
+              }
+            },
+            labelLine: {
+              show: false
+            },
+            data
           }
-        },
-        labelLine: {
-          show: false
-        },
-        data
+        ]
       }
-    ]
+      myChart.setOption(option)
+    }
   }
-  myChart.setOption(option)
-  }
-}
 
   customElements.define('com-sap-sample-echarts-pie_chart_demo_ll', SamplePieChart)
 })()
