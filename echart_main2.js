@@ -68,17 +68,25 @@ var getScriptPromisify = (src) => {
           {
             name: '',
             type: 'pie',
-            radius: [50, 250],
-            center: ['50%', '50%'],
-            roseType: 'area',
+            radius: [20, 140],
+            center: ['25%', '50%'],
+            roseType: 'radius',
             itemStyle: {
-              borderRadius: 8
+              borderRadius: 5
             },
-        data
-      }
-    ]
-  }
-  myChart.setOption(option)
+            label: {
+              show: false
+            },
+            emphasis: {
+              label: {
+                show: true
+              }
+            },
+          data
+        }
+        ]
+    }
+    myChart.setOption(option)
   }
 }
 
