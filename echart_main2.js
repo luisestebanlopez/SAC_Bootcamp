@@ -68,10 +68,11 @@ var getScriptPromisify = (src) => {
           {
             name: '',
             type: 'pie',
-            radius: [20, 140],
+            radius: [50, 250],
+            center: ['50%', '50%'],
             roseType: 'radius',
             itemStyle: {
-              borderRadius: 5
+              borderRadius: 8
             },
             label: {
               show: false
