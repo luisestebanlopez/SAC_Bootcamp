@@ -31,25 +31,14 @@ var getScriptPromisify = (src) => {
     }
 
 
-
-      ////////////////////////////////////////////////////////////
-     ////First comment: Place the first part of the script here//
-    ////////////////////////////////////////////////////////////
-
     set myDataSource (dataBinding) {
       this._myDataSource = dataBinding
       this.render()
     }
     
-    ////////////////////////////////////////////////////////////
-    
+   
     async render () {
       await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
-
-
-      /////////////////////////////////////////////////////////////
-     ///Second comment: Place the second part of the script here//
-    /////////////////////////////////////////////////////////////
 
       if (!this._myDataSource || this._myDataSource.state !== 'success') {
         return
@@ -63,13 +52,9 @@ var getScriptPromisify = (src) => {
       }
       })
 
-    ////////////////////////////////////////////////////////////
+
       
       const myChart = echarts.init(this._root, 'wight')
-
-      ////////////////////////////////////////////////////////////
-     ///Third comment: Place the third part of the script here///
-    ////////////////////////////////////////////////////////////
 
       const option = {
         tooltip: {
@@ -111,8 +96,6 @@ var getScriptPromisify = (src) => {
   myChart.setOption(option)
   }
 }
-      
-    ////////////////////////////////////////////////////////////
 
   customElements.define('com-sap-sample-echarts-pie_chart_demo_xx', SamplePieChart)
 })()
